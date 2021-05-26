@@ -14,4 +14,14 @@ describe('Main View', () => {
   it('Should display the site title on page load', () => {
     cy.get('h1').contains('Turing Cafe Reservations')
   })
+
+  it('Should render an empty reservation form field on page load', () => {
+    cy.get('form').get('input').should('have.length', 4)
+      .get('form').should('have.value', '')
+      .get('button').contains('MAKE RESERVATION')
+  })
+
+  it('Should render exisiting reservations from database', () => {
+    cy.get('.resy-card').should('have.length', 3)
+  })
 })
