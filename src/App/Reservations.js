@@ -6,7 +6,9 @@ const Reservations = ({reservations}) => {
     return (
       <Card
         name={reservation.name}
-        amount={reservation.amount}
+        date={reservation.date}
+        time={reservation.time}
+        number={reservation.number}
         id={reservation.id}
         key={reservation.id}
       />
