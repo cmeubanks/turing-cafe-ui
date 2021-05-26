@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Reservations from './Reservations.js';
+import apiCalls from './api.js';
 
 class App extends Component {
   constructor() {
@@ -9,6 +10,14 @@ class App extends Component {
       reservations: []
     }
   }
+
+  componentDidMount = () => {
+    apiCalls.getReservations()
+    .then(data => {
+      this.setState({ reservations: data })
+    })
+  }
+
   render() {
     return (
       <div className="App">
