@@ -11,3 +11,5 @@ const Card = ({id, name, date, time, number}) => {
     </div>
   )
 }
+
+export default Card;
