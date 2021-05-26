@@ -20,7 +20,10 @@ class App extends Component {
   }
 
   addRes = (newRes) => {
-    this.setState({ reservations: [...this.state.reservations, newRes ]})
+    apiCalls.postReservations(newRes)
+    .then((resData) => {
+      this.setState({ reservations: [...this.state.reservations, resData ]})
+    })
   }
 
   render() {
