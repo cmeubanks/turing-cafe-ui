@@ -5,7 +5,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      test2
+      reservations: []
     }
   }
   render() {
@@ -13,10 +13,9 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-
         </div>
         <div className='resy-container'>
-
+          <Reservations reservations={this.state.reservations}/>
         </div>
       </div>
     )
