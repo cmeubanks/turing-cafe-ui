@@ -5,11 +5,15 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-      name = '',
-      date = '',
-      time = '',
-      number = ''
+      name: '',
+      date: '',
+      time: '',
+      number: ''
     }
+  }
+
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   render() {
@@ -48,3 +52,5 @@ class Form extends Component {
     )
   }
 }
+
+export default Form;
