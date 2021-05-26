@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './Card.js';
 
 const Reservations = ({reservations}) => {
   const reservationsBooked = reservations.map(reservation => {
@@ -12,3 +13,5 @@ const Reservations = ({reservations}) => {
     </React.Fragment>
   )
 }
+
+export default Reservations;
