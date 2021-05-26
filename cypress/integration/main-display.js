@@ -48,7 +48,7 @@ describe('Main View', () => {
       .get('form').get('input[name="time"]')
       .type('10:30')
       .get('form').get('input[name="number"]')
-      .type('2')
+      .type(2)
       .get('button').contains('MAKE RESERVATION').click()
       .get('.resy-card').should('have.length', 4)
   })

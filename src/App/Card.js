@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({id, name, date, time, number}) => {
   return (
-    <div className='resy-card' id={id}>
+    <div className='resy-card' id={id} key={id}>
       <h2>{name}</h2>
       <p>{date}</p>
       <p>{time}</p>
