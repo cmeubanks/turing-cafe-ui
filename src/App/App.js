@@ -30,12 +30,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
-        <div className='resy-form'>
-          <Form addRes={this.addRes}/>
-        </div>
-        <div className='resy-container'>
-          <Reservations reservations={this.state.reservations}/>
-        </div>
+        <main>
+            <Form addRes={this.addRes}/>
+            <div className='resy-container'>
+              <Reservations reservations={this.state.reservations}/>
+            </div>
+        </main>
       </div>
     )
   }
