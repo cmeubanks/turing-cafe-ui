@@ -24,4 +24,19 @@ describe('Main View', () => {
   it('Should render exisiting reservations from database', () => {
     cy.get('.resy-card').should('have.length', 3)
   })
+
+  it('Should update the form value when the user types into the input fields', () => {
+    cy.get('form').get('input[name="name"]')
+      .type('Caroline')
+      .should('have.value', 'Caroline')
+      .get('form').get('input[name="date"]')
+      .type('12/25')
+      .should('have.value', '12/25')
+      .get('form').get('input[name="time"]')
+      .type('6:00')
+      .should('have.value', '6:00')
+      .get('form').get('input[name="number"]')
+      .type('12')
+      .should('have.value', 12)
+  })
 })
