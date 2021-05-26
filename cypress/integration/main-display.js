@@ -39,4 +39,17 @@ describe('Main View', () => {
       .type('12')
       .should('have.value', 12)
   })
+
+  it('Should add a new reservation to reservations field once a request has been submitted', () => {
+    cy.get('form').get('input[name="name"]')
+      .type('Greg')
+      .get('form').get('input[name="date"]')
+      .type('01/15')
+      .get('form').get('input[name="time"]')
+      .type('10:30')
+      .get('form').get('input[name="number"]')
+      .type('2')
+      .get('button').contains('MAKE RESERVATION').click()
+      .get('.resy-card').should('have.length', 4)
+  })
 })
