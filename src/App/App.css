@@ -17,3 +17,18 @@
   font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
+
+.resy-container {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+  grid-gap: 20px;
+}
+
+.resy-card {
+  background: white;
+}
+
+.resy-form {
+
+}
